@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            margin-top: 10px;
+            font-size: 20px;
+            border-radius: 20px;
+        }
+        #btn2{
+            height: 50px;
+            width: 22%;
+        }
+        #btn3{
+            height: 50px;
+            width: 22%;
+        }
+        #btn4{
+            height: 50px;
+            width: 22%;
+        }
+        #btn5{
+            height: 50px;
+            width: 22%;
+            background-color:lightslategrey;
+        }
+        #btn6{
+            height:60px;
+            width: 100px;
+        }
+        #btn7{
+            height: 60px;
+            width: 100px;
+        }
+        #btn8{
+            height: 50px;
+            width:100px;
+        }
+        #btn9{
+            height:60px;
+            width:100px;
+        }
+        #btn10{
+            height:60px;
+            width:100px;
+        }
+        #btn11{
+            height:60px;
+            width:100px;
+        }
+        #btn12{
+            height:60px;
+            width:100px;
+        }
+        #btn13{
+            height:60px;
+            width:100px;
+        }
+
+        #btn14{
+            height: 60px;
+            width:100px;
+        }
+        #btn15{
+            height: 60px;
+            width:100px;
+        }
+        #btn16{
+            height:60px;
+            width:100px;
+        }
+
+        #btn17{
+            height: 60px;
+            width:100px;
+        }
+        #btn18{
+            height:60px;
+            width:150px;
+        }
+        #btn19{
+            height:60px;
+            width: 120px;
+        }
+        #btn20{
+            height: 60px;
+            width: 150px;
+        }
+        button:hover{
+            background-color:rgb(0, 179, 255);
+        }
+        svg{
+            width:90px;
+            height: 20px;
+        }
+
+    </style>
+</head>
+<body>
+   <div id="div">
+   <div id="div1"style="border: 2px solid;border-radius:30px ;  text-align: end;padding-right: 40px;padding-top: 19px;;font-size:30px;height:50px;height: 90px;"></div>
+    <button id="btn2" onclick="cal()">AC</button>
+    <button id="btn3" onclick="cal()">%</button>
+    <button id="btn4" onclick="cal()">/</button>
+    <button id="btn5" onclick="cal()"><svg  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M11.142 20C8.91458 20 7.80085 20 6.87114 19.4986C5.94144 18.9971 5.35117 18.0781 4.17061 16.24L3.48981 15.18C2.4966 13.6336 2 12.8604 2 12C2 11.1396 2.4966 10.3664 3.48981 8.82001L4.17061 7.76001C5.35117 5.92191 5.94144 5.00286 6.87114 4.50143C7.80085 4 8.91458 4 11.142 4L13.779 4C17.6544 4 19.5921 4 20.7961 5.17157C22 6.34315 22 8.22876 22 12C22 15.7712 22 17.6569 20.7961 18.8284C19.5921 20 17.6544 20 13.779 20H11.142Z" stroke="#1C274C" stroke-width="1.5"></path> <path d="M15.5 9.50002L10.5 14.5M10.5 9.5L15.5 14.5" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"></path> </g></svg></button></button>
+    <button id="btn6" onclick="cal()">7</button>
+    <button id="btn7" onclick="cal()">8</button>
+    <button id="btn8" onclick="cal()">9</button>
+    <button id="btn9" onclick="cal()">*</button>
+    <button id="btn10" onclick="cal()">4</button>
+    <button id="btn11" onclick="cal()">5</button>
+    <button id="btn12" onclick="cal()">6</button>
+    <button id="btn13" onclick="cal()">-</button>
+    <button id="btn14" onclick="cal()">1</button>
+    <button id="btn15" onclick="cal()">2</button>
+    <button id="btn16" onclick="cal()">3</button>
+    <button id="btn17" onclick="cal()">+</button>
+    <button id="btn18" onclick="cal()">.</button>
+    <button id="btn19" onclick="cal()">0</button>
+    <button id="btn20" onclick="cal()">=</button>
+</div>
+<script>
+      let div=document.getElementById("div")
+      div.style.border="0px solid "
+      div.style.width="440px"
+      div.style.height="450px"
+      div.style.padding="30px 20px"
+      div.style.gap="10px"
+      div.style.marginLeft="50px"
+      div.style.marginTop="70px"
+      div.style.backgroundColor="grey"
+      div.style.borderRadius="30PX"
+      div.style.boxShadow="0px 0px 5px"
+      
+      let div1=document.getElementById("div1")
+      let btn2=document.getElementById("btn2")
+      let btn3=document.getElementById("btn3")
+      let btn4=document.getElementById("btn4")
+      let btn5=document.getElementById("btn5")
+      let btn6=document.getElementById("btn6")
+      let btn7=document.getElementById("btn7")
+      let btn8=document.getElementById("btn8")
+      let btn9=document.getElementById("btn9")
+      let btn10=document.getElementById("btn10")
+      let btn11=document.getElementById("btn11")
+      let btn12=document.getElementById("btn12")
+      let btn13=document.getElementById("btn13")
+      let btn14=document.getElementById("btn14")
+      let btn15=document.getElementById("btn15")
+      let btn16=document.getElementById("btn16")
+       
+      let op=""
+
+        btn3.addEventListener("click",(e)=>{
+        e.preventDefault()
+        op=""
+        div1.innerHTML=op
+      })
+      btn5.addEventListener("click",(e)=>{
+        e.preventDefault()
+        op=op.slice(0,op.length-1)
+        div1.innerHTML=op
+      }) 
+
+      btn2.addEventListener("click",(e)=>{
+       e.preventDefault()
+       if(op.length)
+       op=op+"AC"
+       div1.innerHTML=op
+      })
+
+      btn4.addEventListener("click",(e)=>{
+       e.preventDefault()
+       if(op.length)
+       op=op+"/"
+       div1.innerHTML=op
+      })
+
+      btn6.addEventListener("click",(e)=>{
+       e.preventDefault()
+       op=op+"7"
+       div1.innerHTML=op
+      })
+
+      btn7.addEventListener("click",(e)=>{
+       e.preventDefault()
+       op=op+"8"
+       div1.innerHTML=op
+      })
+      
+      btn8.addEventListener("click",(e)=>{
+       e.preventDefault()
+       op=op+"9"
+       div1.innerHTML=op
+      })
+
+      btn9.addEventListener("click",(e)=>{
+       e.preventDefault()
+       if(op.length)
+       op=op+"*"
+       div1.innerHTML=op
+      })
+
+      btn10.addEventListener("click",(e)=>{
+       e.preventDefault()
+       op=op+"4"
+       div1.innerHTML=op
+      })
+
+      btn11.addEventListener("click",(e)=>{
+       e.preventDefault()
+       op=op+"5"
+       div1.innerHTML=op
+      })
+
+      btn12.addEventListener("click",(e)=>{
+       e.preventDefault()
+       op=op+"6"
+       div1.innerHTML=op
+      })
+
+
+      btn13.addEventListener("click",(e)=>{
+       e.preventDefault()
+       if(op.length)
+       op=op+"-"
+       div1.innerHTML=op
+      })
+
+      btn14.addEventListener("click",(e)=>{
+       e.preventDefault()
+       op=op+"1"
+       div1.innerHTML=op
+      })
+
+      btn15.addEventListener("click",(e)=>{
+       e.preventDefault()
+       op=op+"2"
+       div1.innerHTML=op
+      })
+
+      btn16.addEventListener("click",(e)=>{
+       e.preventDefault()
+       op=op+"3"
+       div1.innerHTML=op
+      })
+
+      btn17.addEventListener("click",(e)=>{
+       e.preventDefault()
+       if(op.length)
+       op=op+"+"
+       div1.innerHTML=op
+      })
+
+      btn19.addEventListener("click",(e)=>{
+       e.preventDefault()
+       op=op+"0"
+       div1.innerHTML=op
+      })
+
+      btn18.addEventListener("click",(e)=>{
+       e.preventDefault()
+       if(op.length)
+       op=op+"."
+       div1.innerHTML=op
+      })
+
+      btn20.addEventListener("click",(e)=>{
+       e.preventDefault()
+       div1.innerHTML=eval(op)
+      })
+</script>
+</body>
+</html>
+
+
